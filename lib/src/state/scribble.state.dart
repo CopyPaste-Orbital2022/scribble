@@ -8,6 +8,7 @@ part 'scribble.state.freezed.dart';
 part 'scribble.state.g.dart';
 
 enum ScribblePointerMode {
+  none,
   all,
   mouseOnly,
   penOnly,
@@ -101,6 +102,8 @@ class ScribbleState with _$ScribbleState {
           PointerDeviceKind.stylus,
           PointerDeviceKind.invertedStylus,
         };
+      case ScribblePointerMode.none:
+        return {};
     }
   }
 
